@@ -1,10 +1,5 @@
 # IoT Sensor Data Collection System
 
-**Aiden Cherniske and Brandon Prevuznak**  
-**Professors Kozick and Thomas**  
-**ECEG100**  
-**2 April 2024**  
-
 ## Table of Contents
 1. [Introduction](#introduction)
 2. [Base Functionality](#base-functionality)
