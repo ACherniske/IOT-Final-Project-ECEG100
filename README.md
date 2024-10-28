@@ -49,11 +49,18 @@ Integrating our subsystems was seamless due to careful planning and well-documen
 
 The final phase of our full system integration involved incorporating the Airlift to facilitate the upload of our measurements to ThingSpeak via WiFi using the ESP32. This integration process was efficient, thanks to the compatibility of the Airlift Feather Wing with the Feather M4, enabling seamless connectivity to WiFi networks. This integrated system serves as a solid foundation for continued refinement and productization.
 
-![Integrated Circuit Drawing (Fritzing)](/images/img1.PNG)  
-*Figure 1: Integrated Circuit Drawing (Fritzing)*
+<div align=center>
+  <img src="/images/img1.PNG" width="700" alt="IMG1"/>
+  <br>
+  *Figure 1: Integrated Circuit Drawing (Fritzing)*
+</div>
 
-![Integrated Circuit Schematic (KiCAD)](/images/img2.PNG)  
-*Figure 2: Integrated Circuit Schematic (KiCAD)*
+<div align=center>
+  <img src="/images/img2.PNG" width="700" alt="IMG1"/>
+  <br>
+  *Figure 2: Integrated Circuit Drawing (KiCAD)*
+</div>
+
 
 ## Calibration
 ### AM2320 and TMP36 Temperature
@@ -101,8 +108,11 @@ The final goal of our project is to productize the IoT sensor data collection sy
 - **Environmental Monitoring:** The data collected can aid in monitoring environmental conditions in urban and rural settings.
 - **Security Systems:** The PIR occupancy sensor can be integrated into security systems to provide alerts based on detected motion.
 
-![Final Design Full Assembly](/images/img4.PNG) 
-*Figure 3: Final Design Full Assembly (KiCAD)*
+<div align=center>
+  <img src="/images/img4.PNG" width="700" alt="IMG1"/>
+  <br>
+  *Figure 3: Final Design Full Assembly*
+</div>
 
 To facilitate productization, we plan to focus on the following aspects:
 
