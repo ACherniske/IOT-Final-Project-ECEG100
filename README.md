@@ -31,25 +31,13 @@ The AM2320 boasts long-term stability and I2C communication with temperature and
 ### TMP36 Temperature Sensor
 To create a circuit, we first needed to find the pinout for the TMP36. According to the datasheet, the outer pins are VCC and ground, while the center pin is an analog output. The TMP36 outputs a voltage proportional to the temperature in degrees Celsius. We read the measured voltage on an analog pin and convert it to a digital value using the equation:
 
-\[
-\text{Temperature in mV} = \left(\frac{\text{pin.value} \times 3.3}{65536}\right) \times 1000
-\]
-
-The equation to convert this voltage to temperature is:
-
-\[
-\text{Temp in °C} = \frac{(\text{Vout in mV}) - 500}{10}
-\]
-
-This value is also converted to Fahrenheit.
+((pin.value * 3.3) / 65536) * 1000 which returns a measurement in mV. The equation to convert this calculated voltage to temperature is Temp in °C = [(Vout in mV) - 500] / 10. This value was also converted to Fahrenheit using the conversion (Temp°C × 9/5) + 32.
 
 ### Photoresistor
 To implement the photoresistor, we used a voltage output and a voltage divider equation to determine the voltage across the photoresistor. The resistivity of the photoresistor increases when light intensity decreases, so the voltage difference measured across it provides a value proportional to light intensity. The voltage read by the Feather is sent using an analog-to-digital conversion, applying the equation:
 
-\[
-\text{Voltage} = \left(\frac{\text{pin.value} \times 3.3}{65536}\right) \times 1000
-\]
-
+ ((pin.value * 3.3) / 65536) * 1000
+ 
 ### PIR Occupancy Sensor
 Working with the PIR occupancy sensor was the most difficult part of creating the individual subsystems. The pinout for the occupancy sensor consists of VCC and ground for the outer pins, with a digital output for the center pin. We initially connected the PIR sensor to the 3.3V power source provided by the Feather M4 but found that this was insufficient. We connected the PIR sensor to the USB connection on the Feather, which supplies 5V. The values from the PIR sensor are boolean, which we reflected as 1 or 0 per the requirements for ThingSpeak. Our final code converts these boolean values to integer values of 1 for true and 0 for false.
 
@@ -61,10 +49,10 @@ Integrating our subsystems was seamless due to careful planning and well-documen
 
 The final phase of our full system integration involved incorporating the Airlift to facilitate the upload of our measurements to ThingSpeak via WiFi using the ESP32. This integration process was efficient, thanks to the compatibility of the Airlift Feather Wing with the Feather M4, enabling seamless connectivity to WiFi networks. This integrated system serves as a solid foundation for continued refinement and productization.
 
-![Integrated Circuit Drawing (Fritzing)](path/to/figure1.png)  
+![Integrated Circuit Drawing (Fritzing)](/images/img1.PNG)  
 *Figure 1: Integrated Circuit Drawing (Fritzing)*
 
-![Integrated Circuit Schematic (KiCAD)](path/to/figure2.png)  
+![Integrated Circuit Schematic (KiCAD)](/images/img2.PNG)  
 *Figure 2: Integrated Circuit Schematic (KiCAD)*
 
 ## Calibration
@@ -112,6 +100,8 @@ The final goal of our project is to productize the IoT sensor data collection sy
 - **Home Automation:** The system can be used in smart home applications to monitor temperature, humidity, and occupancy for energy efficiency.
 - **Environmental Monitoring:** The data collected can aid in monitoring environmental conditions in urban and rural settings.
 - **Security Systems:** The PIR occupancy sensor can be integrated into security systems to provide alerts based on detected motion.
+
+![Final Design Full Assembly](/images/img4.PNG) 
 
 To facilitate productization, we plan to focus on the following aspects:
 
