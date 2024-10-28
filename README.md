@@ -102,6 +102,7 @@ The final goal of our project is to productize the IoT sensor data collection sy
 - **Security Systems:** The PIR occupancy sensor can be integrated into security systems to provide alerts based on detected motion.
 
 ![Final Design Full Assembly](/images/img4.PNG) 
+*Figure 3: Final Design Full Assembly (KiCAD)*
 
 To facilitate productization, we plan to focus on the following aspects:
 
