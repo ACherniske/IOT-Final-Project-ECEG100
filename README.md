@@ -134,3 +134,5 @@ In conclusion, our IoT sensor data collection system demonstrates significant po
 2. TMP36 Sensor Datasheet.
 3. NSL-5152 Photoresistor Datasheet.
 4. PIR Sensor Documentation.
+
+This repo is subject to edits and updates when I find time to better document this process
